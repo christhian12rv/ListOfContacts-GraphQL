@@ -3,7 +3,7 @@ import ContextInterface from '../../../interfaces/ContextInterface';
 
 export default {
 	Query: {
-		contacts: async (obj, args, context: ContextInterface, info): Promise<ContactInterface[]> => {
+		contacts: async (obj, args, context: ContextInterface): Promise<ContactInterface[]> => {
 			const contacts = await context.contactService.getAll();
 
 			return contacts;
